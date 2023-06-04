@@ -13,7 +13,6 @@ from prefect_aws import S3Bucket
 from prefect.artifacts import create_markdown_artifact
 from datetime import date
 
-
 @task(retries=3, retry_delay_seconds=2)
 def read_data(filename: str) -> pd.DataFrame:
     """Read data into DataFrame"""
